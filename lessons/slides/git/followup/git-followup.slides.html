@@ -1772,7 +1772,7 @@ text-align: inherit;
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="first-lets-review-some-git-basics-and-the-development-workflow">First, let's review some <code>Git</code> basics and the development workflow:</h2>
+<h2 id="first-lets-review-some-git-basics-and-the-development-workflow">First, let's review some <code>git</code> basics and the development workflow:</h2>
 </div></section>
     </section><section>
     <section>
@@ -1895,7 +1895,7 @@ text-align: inherit;
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="git-diff-shows-the-differences-between-the-files-in-the-working-directory-and-the-stage-index">1. <code>git diff</code> shows the differences between the files in the <em>Working Directory</em> and the <em>Stage (Index)</em></h3>
+<h3 id="git-diff-shows-the-differences-between-the-files-in-the-working-directory-and-the-stage-index"><code>git diff</code> shows the differences between the files in the <em>Working Directory</em> and the <em>Stage (Index)</em></h3>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1907,7 +1907,7 @@ text-align: inherit;
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="git-diff-head-shows-the-differences-between-the-filed-in-the-working-directory-and-the-current-checked-out-branch.">2. <code>git diff HEAD</code> shows the differences between the filed in the <em>Working Directory</em> and the <em>current checked out branch</em>.</h3>
+<h3 id="git-diff-head-shows-the-differences-between-the-filed-in-the-working-directory-and-the-current-checked-out-branch."><code>git diff HEAD</code> shows the differences between the filed in the <em>Working Directory</em> and the <em>current checked out branch</em>.</h3>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1919,7 +1919,7 @@ text-align: inherit;
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="git-diff---staged-shows-the-differences-between-the-stage-index-and-the-current-checked-out-branch.">3. <code>git diff --staged</code> shows the differences between the <em>Stage (Index)</em> and the <em>current checked out branch</em>.</h3>
+<h3 id="git-diff---staged-shows-the-differences-between-the-stage-index-and-the-current-checked-out-branch."><code>git diff --staged</code> shows the differences between the <em>Stage (Index)</em> and the <em>current checked out branch</em>.</h3>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1931,7 +1931,7 @@ text-align: inherit;
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="git-diff-bc07e-shows-the-differences-between-a-commit-and-the-working-directory.">4. <code>git diff bc07e</code> shows the differences between <em>a commit</em> and the <em>Working Directory</em>.</h3>
+<h3 id="git-diff-bc07e-shows-the-differences-between-a-commit-and-the-working-directory."><code>git diff bc07e</code> shows the differences between <em>a commit</em> and the <em>Working Directory</em>.</h3>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1943,7 +1943,7 @@ text-align: inherit;
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="git-diff-bc07e-31dba-show-the-differences-between-any-two-commits.">5. <code>git diff bc07e 31dba</code> show the differences between <em>any two commits</em>.</h3>
+<h3 id="git-diff-bc07e-31dba-show-the-differences-between-any-two-commits."><code>git diff bc07e 31dba</code> show the differences between <em>any two commits</em>.</h3>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1991,6 +1991,64 @@ text-align: inherit;
 <h4 id="or-to-switch-branches">(or to switch branches)</h4>
 </div>
     </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="key-points-viewing-commit-history-and-restoring-files">Key Points: Viewing Commit History and Restoring Files</h2>
+</div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>There are three main <code>trees</code> or <code>collections of files</code> that <code>git</code> manages and manipulates.</li>
+</ul>
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Use <code>git diff</code> and <code>git diff &lt;commit or branch&gt; &lt;filename&gt;</code> to view changes to files between commits.</li>
+</ul>
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Use <code>git checkout &lt;commit or branch&gt; &lt;filename&gt;</code> to restore a file to a version in a particular commit.</li>
+</ul>
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>git checkout &lt;commit or branch&gt; &lt;filename&gt;</code> is not working directory safe. It will override all changes in working directory and index.</li>
+</ul>
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><code>git checkout &lt;commit or branch&gt;</code> will actually moved HEAD to that particular commit or branch. (This is working directory safe, but used for a different purpose.)</li>
+</ul>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="questions">Questions?</h2>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre>
+</pre></div>
+
+</div>
+</div>
+
+</div></section>
     </section>
 </div>
 </div>
