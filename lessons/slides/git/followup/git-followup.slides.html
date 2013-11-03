@@ -1734,20 +1734,133 @@ text-align: inherit;
 <section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="git-viewing-commit-history-and-restoring-files">Git: Viewing Commit History and Restoring Files</h1>
+<h1 id="git-viewing-commit-history-and-restoring-files"><code>Git</code>: Viewing Commit History and Restoring Files</h1>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="version-control-with-git-allows-you-to-view-and-restore-changes-made-to-a-file-over-time.">Version control with <code>git</code> allows you to view and restore changes made to a file over time.</h2>
+<h2 id="lesson-objectives">Lesson Objectives</h2>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><code>git log</code></li>
+<li>Review the basic linear git workflow</li>
 </ul>
 </div>
     </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Review how to view the commit history using <code>git log</code></li>
+</ul>
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Use <code>git diff</code> to see the exact lines that were added and removed from a file</li>
+</ul>
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Use <code>git checkout</code> to restore a prevsious version of a file</li>
+</ul>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="first-lets-review-some-git-basics-and-the-development-workflow">First, let's review some <code>Git</code> basics and the development workflow:</h2>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="three-main-trees-or-collections-of-files-in-git">Three main <em>trees</em> or <em>collections of files</em> in <code>git</code>:</h3>
+</div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="figure">
+<img src="three_trees_of_git.png" alt="Three Trees of Git" /><p class="caption">Three Trees of Git</p>
+</div>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="development-workflow-work">Development workflow: work</h3>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="figure">
+<img src="work.png" alt="Three Trees of Git" /><p class="caption">Three Trees of Git</p>
+</div>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="development-workflow-work-add">Development workflow: work, add</h3>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="figure">
+<img src="work_add.png" alt="Three Trees of Git" /><p class="caption">Three Trees of Git</p>
+</div>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="development-workflow-work-add-commit">Development workflow: work, add, commit</h3>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="figure">
+<img src="work_add_commit.png" alt="Three Trees of Git" /><p class="caption">Three Trees of Git</p>
+</div>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="development-workflow-work-add-commit-work">Development workflow: work, add, commit, work</h3>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="figure">
+<img src="work_add_commit_work.png" alt="Three Trees of Git" /><p class="caption">Three Trees of Git</p>
+</div>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="development-workflow-work-add-commit-work-add">Development workflow: work, add, commit, work, add</h3>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="figure">
+<img src="work_add_commit_work_add.png" alt="Three Trees of Git" /><p class="caption">Three Trees of Git</p>
+</div>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="development-workflow-work-add-commit-work-add-commit">Development workflow: work, add, commit, work, add, commit</h3>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="figure">
+<img src="work_add_commit_work_add_commit.png" alt="Three Trees of Git" /><p class="caption">Three Trees of Git</p>
+</div>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="development-workflow-work-add-commit">Development workflow: work, (add), commit</h3>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="figure">
+<img src="commit_without_add.png" alt="Three Trees of Git" /><p class="caption">Three Trees of Git</p>
+</div>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="how-do-we-look-at-the-difference-between-commits">How do we look at the difference between commits?</h2>
+</div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
@@ -1755,6 +1868,71 @@ text-align: inherit;
 </ul>
 </div>
     </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="lets-look-at-an-example."><em>Let's look at an example.</em></h3>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="lets-review-how-we-just-looked-at-the-differences-between-commits.">Let's review how we just looked at the differences between commits.</h3>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="git-diff-shows-the-differences-between-the-files-in-the-working-directory-and-the-stage-index">1. <code>git diff</code> shows the differences between the files in the <em>Working Directory</em> and the <em>Stage (Index)</em></h3>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="figure">
+<img src="diff.png" alt="Three Trees of Git" /><p class="caption">Three Trees of Git</p>
+</div>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="git-diff-head-shows-the-differences-between-the-filed-in-the-working-directory-and-the-current-checked-out-branch.">2. <code>git diff HEAD</code> shows the differences between the filed in the <em>Working Directory</em> and the <em>current checked out branch</em>.</h3>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="figure">
+<img src="diff_head.png" alt="Three Trees of Git" /><p class="caption">Three Trees of Git</p>
+</div>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="git-diff---staged-shows-the-differences-between-the-stage-index-and-the-current-checked-out-branch.">3. <code>git diff --staged</code> shows the differences between the <em>Stage (Index)</em> and the <em>current checked out branch</em>.</h3>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="figure">
+<img src="diff_staged.png" alt="Three Trees of Git" /><p class="caption">Three Trees of Git</p>
+</div>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="git-diff-bc07e-shows-the-differences-between-a-commit-and-the-working-directory.">4. <code>git diff bc07e</code> shows the differences between <em>a commit</em> and the <em>Working Directory</em>.</h3>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="figure">
+<img src="diff_commit.png" alt="Three Trees of Git" /><p class="caption">Three Trees of Git</p>
+</div>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="git-diff-bc07e-31dba-show-the-differences-between-any-two-commits.">5. <code>git diff bc07e 31dba</code> show the differences between <em>any two commits</em>.</h3>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="figure">
+<img src="diff_commits.png" alt="Three Trees of Git" /><p class="caption">Three Trees of Git</p>
+</div>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="how-do-we-restore-a-file-from-a-previous-commit">How do we restore a file from a previous commit?</h2>
+</div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
@@ -1765,20 +1943,43 @@ text-align: inherit;
     
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><code>git reset</code></li>
+<li><code>git reset</code> (a little more tricky, we are going to save this for another day)</li>
 </ul>
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="lets-look-at-an-example."><em>Let's look at an example.</em></h3>
 </div>
     </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="first-lets-review-some-git-basics-and-the-development-workflow">First, let's review some Git basics and the development workflow:</h2>
+<h3 id="lets-review-how-we-just-restored-a-file-in-our-working-directory-to-the-version-in-a-previous-commit.">Let's review how we just restored a file in our <em>Working Directory</em> to the version in a previous commit.</h3>
 </div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="development-workflow-work-add-commit-work-add-commit...">Development workflow: work, add, commit, work, add, commit...</h3>
+<h3 id="the-checkout-command-is-used-to-copy-files-the-commit-history-or-stage-to-the-working-directory.">The checkout command is used to copy files the commit history (or stage) to the working directory.</h3>
 </div>
-    </div></section>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="or-to-switch-branches">(or to switch branches)</h4>
+</div>
+    </div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre>
+</pre></div>
+
+</div>
+</div>
+
+</div></section>
     </section>
 </div>
 </div>
