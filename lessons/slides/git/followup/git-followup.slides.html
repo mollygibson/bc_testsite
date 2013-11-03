@@ -1994,6 +1994,25 @@ text-align: inherit;
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="git-checkout-bc07e-file1.txt-copies-file1.txt-to-the-working-directory-and-to-the-stage-index."><code>git checkout bc07e file1.txt</code> copies <code>file1.txt</code> to the <em>Working Directory</em> and to the <em>Stage (Index)</em>.</h3>
+<ul>
+<li>Current branch is <em>not</em> changed.</li>
+<li>If no commit name is given, files are copied from the Stage (Index).</li>
+<li>NOT working directory safe (will override all uncommitted changes).</li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="git-checkout-branch-changes-the-head-to-the-branch-and-all-file-versions-from-that-branch-are-copied-into-the-working-directory."><code>git checkout &lt;branch&gt;</code> changes the HEAD to the branch and all file versions from that branch are copied into the <em>Working Directory</em>.</h3>
+<ul>
+<li>Working directory safe (will check to make sure it isn't blowing away uncommitted changes).</li>
+<li>If commit given instead of branch, will make a detached HEAD and work like an anonymous branch.</li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="key-points-viewing-commit-history-and-restoring-files">Key Points: Viewing Commit History and Restoring Files</h2>
 </div><div class="fragment">
     
@@ -2035,19 +2054,6 @@ text-align: inherit;
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="questions">Questions?</h2>
-</div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight"><pre>
-</pre></div>
-
-</div>
-</div>
-
 </div></section>
     </section>
 </div>
